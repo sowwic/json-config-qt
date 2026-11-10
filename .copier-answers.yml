@@ -1,0 +1,17 @@
+_commit: v1
+_src_path: gh:sowwic/copier-python-project
+author: Dima Shevchenko
+author_email: 47799401+sowwic@users.noreply.github.com
+bundle_app: false
+develop_branch: develop
+github_user: sowwic
+github_workflow: true
+ide: nvim
+initial_version: 1.0.0
+package_name: json_config_qt
+package_slug: json_config_qt
+project_name: json-config-qt
+project_slug: json-config-qt
+project_type: qml_app
+python_version: '3.14'
+release_branch: main
