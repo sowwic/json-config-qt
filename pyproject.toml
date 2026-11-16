@@ -1,6 +1,6 @@
 [project]
 name = "sowwic-json-config-qt"
-version = "1.0.0"
+version = "1.0.1"
 description = "Qt (PySide6) editor for the layers of a json-config LayeredConfig: a tree view with typed values, undo and per-layer saving."
 authors = [
   { name = "Dima Shevchenko", email = "47799401+sowwic@users.noreply.github.com" },
