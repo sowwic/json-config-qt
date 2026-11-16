@@ -9,7 +9,7 @@ INT_LIMIT = 2**31 - 1
 class ValueDelegate(QtWidgets.QStyledItemDelegate):
     """Creates the editor matching the type of each value."""
 
-    def createEditor(self, parent, option, index):
+    def createEditor(self, parent, option, index) -> QtWidgets.QWidget | None:
         """Create the editor matching the value's type.
 
         Color values open a color dialog instead and return None, as do types

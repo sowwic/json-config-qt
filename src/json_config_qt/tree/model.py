@@ -218,7 +218,9 @@ class JsonTreeModel(QtCore.QAbstractItemModel):
             flags |= QtCore.Qt.ItemFlag.ItemIsEditable
         return flags
 
-    def data(self, index: QtCore.QModelIndex, role=QtCore.Qt.ItemDataRole.DisplayRole):
+    def data(
+        self, index: QtCore.QModelIndex, role=QtCore.Qt.ItemDataRole.DisplayRole
+    ) -> typing.Any:
         """Return the data of *index* for *role*.
 
         Besides the standard roles, KIND_ROLE returns the node's Kind and
