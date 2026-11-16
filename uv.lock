@@ -957,7 +957,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pyside6" },
-    { name = "sowwic-json-config" },
+    { name = "sowwic-json-config", specifier = ">=1.0.7" },
 ]
 
 [package.metadata.requires-dev]

@@ -9,7 +9,7 @@ license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.14"
 packages = [{ include = "json_config_qt", from = "src" }]
-dependencies = ["pyside6", "sowwic-json-config"]
+dependencies = ["pyside6", "sowwic-json-config>=1.0.7"]
 keywords = ["json", "config", "layers", "editor", "qt", "pyside6"]
 classifiers = [
   "Programming Language :: Python :: 3",
