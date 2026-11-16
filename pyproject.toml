@@ -1,20 +1,27 @@
 [project]
-name = "json-config-qt"
-version = "1.0.0"
-description = "Description"
+name = "sowwic-json-config-qt"
+version = "1.0.1"
+description = "Qt (PySide6) editor for the layers of a json-config LayeredConfig: a tree view with typed values, undo and per-layer saving."
 authors = [
-    {name = "Dima Shevchenko",email = "47799401+sowwic@users.noreply.github.com"}
+  { name = "Dima Shevchenko", email = "47799401+sowwic@users.noreply.github.com" },
 ]
-license = {text = "MIT"}
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.14"
-packages = [
-    {include = "json_config_qt", from="src"},
+packages = [{ include = "json_config_qt", from = "src" }]
+dependencies = ["pyside6", "sowwic-json-config>=1.0.7"]
+keywords = ["json", "config", "layers", "editor", "qt", "pyside6"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.14",
+  "Environment :: X11 Applications :: Qt",
 ]
-dependencies = [
-    "pyside6",
-    "json-config",
-]
+
+[project.urls]
+Homepage = "https://github.com/sowwic/json-config-qt"
+Documentation = "https://sowwic.github.io/json-config-qt/"
+Issues = "https://github.com/sowwic/json-config-qt/issues"
+Changelog = "https://github.com/sowwic/json-config-qt/blob/main/CHANGELOG.rst"
 
 [build-system]
 requires = ["uv_build>=0.10.6"]
@@ -25,21 +32,18 @@ module-name = "json_config_qt"
 
 [dependency-groups]
 dev = [
-    "pytest",
-    "pytest-cov",
-    "pytest-mock",
-    "pytest-qt",
-    "mkdocs",
-    "mkdocs-material",
-    "mkdocstrings[python]",
-    "mkdocs-autorefs",
-    "mkdocs-autoapi",
-    "ruff",
-    "debugpy",
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+  "pytest-qt",
+  "mkdocs",
+  "mkdocs-material",
+  "mkdocstrings[python]",
+  "mkdocs-autorefs",
+  "mkdocs-autoapi",
+  "ruff",
+  "debugpy",
 ]
-
-[tool.uv.sources]
-json-config = { git = "https://github.com/sowwic/json-config", tag = "v1.0.5"}
 
 [tool.ruff]
 src = ["src"]
@@ -47,16 +51,8 @@ exclude = ["**/resources_rc.py"]
 
 show-fixes = true
 line-length = 89
-lint.select = [
-    "E",
-    "F",
-    "UP",
-]
-lint.ignore = [
-    "D100",
-    "D104",
-    "D103",
-]
+lint.select = ["E", "F", "UP"]
+lint.ignore = ["D100", "D104", "D103"]
 
 [tool.pytest.ini_options]
 addopts = "--cov=json_config_qt --cov-report=term-missing"
@@ -64,8 +60,8 @@ log_cli = true
 log_cli_level = "ERROR"
 
 [tool.ty.rules]
-unresolved-attribute="ignore"
-invalid-argument-type="ignore"
-invalid-assignment="ignore"
-invalid-return-type="ignore"
-invalid-method-override="ignore"
+unresolved-attribute = "ignore"
+invalid-argument-type = "ignore"
+invalid-assignment = "ignore"
+invalid-return-type = "ignore"
+invalid-method-override = "ignore"
